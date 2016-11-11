@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <orders_adminhtml_orders_index>
+    	<reference name="content">
+            <block type="orders/adminhtml_orders" name="orders" template="orders/upload_csv.phtml"/>
+        </reference>
+    </orders_adminhtml_orders_index>
+	<orders_adminhtml_orders_new>
+    	<!-- <reference name="head">
+    		<action method="addItem"><type>skin_js</type><name>orders/upload.js</name></action>
+		</reference> -->
+        <reference name="content">
+            <block type="core/template" name="orders" template="orders/upload_csv.phtml"/>
+        </reference>
+
+    </orders_adminhtml_orders_new>
+</layout>

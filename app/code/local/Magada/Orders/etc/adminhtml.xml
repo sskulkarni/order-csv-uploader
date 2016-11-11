@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<config>
+	<menu>
+		<orders translate="title" module="orders">
+            <title>Orders</title>
+            <sort_order>71</sort_order>               
+           	<children>
+                <items module="orders">
+                    <title>Bulk Order Upload</title>
+                        <sort_order>0</sort_order>
+                        <action>orders/adminhtml_orders/new</action>
+                </items>
+            </children>
+        </orders>
+	</menu>
+	<acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+					<orders translate="title" module="orders">
+						<title>orders</title>
+                        <sort_order>71</sort_order>
+						<children>
+							<items translate="title" module="orders">
+	                                <title>orders</title>
+	                                <sort_order>0</sort_order>
+	                        </items>
+						</children>
+                    </orders>
+				</children>
+            </admin>
+        </resources>
+    </acl>
+</config>	

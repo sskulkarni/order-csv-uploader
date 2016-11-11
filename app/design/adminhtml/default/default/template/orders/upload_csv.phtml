@@ -1,0 +1,33 @@
+<script type="text/javascript">
+function runProfile()
+{
+  var selectedanswer=document.getElementById("csvfile").value;
+  var customers=document.getElementById("customers").value;
+  var delimeter=document.getElementById("delimeter").value;
+  var enclouser=document.getElementById("enclouser").value;
+  var url = "<?php echo $this->getUrl('orders/Adminhtml_orders/saveAjax');?>"; 
+  var path_order = "<?php echo Mage::helper('adminhtml')->getUrl('orders/Adminhtml_orders/new');?>"; 
+
+  new Ajax.Request(url, {
+            method:'post'
+            , parameters: {
+                   csvfile: selectedanswer,
+                   customers : customers,
+                   delimeter : delimeter,
+                   enclouser : enclouser,
+            }
+            , requestHeaders: {Accept: 'application/json'},
+            // onComplete: function(transport) {
+            //     window.location.href = path_order;
+            //   }
+          });
+
+} 
+function deleteProfiles()
+{
+  var delete_url = "<?php echo Mage::helper('adminhtml')->getUrl('orders/Adminhtml_orders/delete');?>";
+    if (confirm("Are you sure?") == true) {
+        window.location.href = delete_url;
+    } 
+}
+</script>

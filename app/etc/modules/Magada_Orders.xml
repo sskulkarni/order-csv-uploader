@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magada_Orders>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Magada_Orders>
+    </modules>
+</config>
